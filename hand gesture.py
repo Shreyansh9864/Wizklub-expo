@@ -46,9 +46,8 @@ while True:
     cv2.imshow("Hand Detection", frame)
 
     # Exit on pressing 'q'
-   if cv2.waitKey(1) & 0xFF == ord('q') or cv2.getWindowProperty("MediaPipe Face Detection", cv2.WND_PROP_VISIBLE) < 1:
+    if cv2.waitKey(1) & 0xFF == ord('q'):
         break
-
 
 # Release resources
 cap.release()
