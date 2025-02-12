@@ -3,7 +3,7 @@ import face_recognition as fg
 import os
 
 # Directory containing reference images
-directory = "Shreyansh"
+directory = "Shreyansh"  #Make a folder instead of this if ur using mine  put photos in it 
 files = os.listdir(directory)
 
 # Ensure there is at least one image file
