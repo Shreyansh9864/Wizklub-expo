@@ -77,9 +77,10 @@ while cap.isOpened():
     # Display the frame
     cv2.imshow("Face Mesh & Iris Tracking", frame)
 
-    # Exit on pressing 'q'
-    if cv2.waitKey(1) & 0xFF == ord('q'):
+    # Exit on pressing 'q' and pressing x
+    if cv2.waitKey(1) & 0xFF == ord('q') or cv2.getWindowProperty("MediaPipe Face Detection", cv2.WND_PROP_VISIBLE) < 1:
         break
+
 
 cap.release()
 cv2.destroyAllWindows()
